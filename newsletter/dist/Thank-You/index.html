@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/newsletter/dist/Thank-You/output.css" rel="stylesheet">
+</head>
+<body class="md:bg-slate-800 bg-white w-auto h-auto md:p-20 min-h-screen flex justify-center items-center">
+  <div class="bg-white flex flex-col md:min-h-fit md:w-[450px] md:h-auto w-full min-h-screen h-full md:justify-center  items-start space-y-6 md:rounded-2xl md:gap-4 md:p-12 p-6">
+    <div class="mt-[50px] md:mt-0">
+      <img src="/newsletter/assets/images/icon-success.svg" alt="" class="w-12 h-12">
+    </div>
+    <div>
+      <h1 class="text-6xl font-semibold text-slate-950">Thanks for subscribing!</h1>
+    </div>
+    <div>
+      <p class="text-[17px]">A confirmation email has been sent to  <a id="thankYouMessage" class="font-bold text-slate-900 underline hover:text-blue-600" target="_blank" rel="noopener noreferrer"></a>. Please open it and read it carefully!</p>
+    </div>
+    <div class="flex flex-col justify-center items-center w-full mt-auto md:mt-0">
+      <button class="bg-gradient-to-r from-pink-500 to-orange-500 shadow-lg text-white w-full rounded-[5px] py-3 mt-2 font-semibold h-[45px] hover:cursor-pointer transition duration-200 hover:brightness-90 active:scale-90" onclick="window.location.href='/newsletter/dist/Sign-Up/SignUp.html'">
+        Dismiss Message
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Get the email from the URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get('email');
+
+    // Show a thank you message
+    const messageElement = document.getElementById('thankYouMessage');
+    if (email) {
+      messageElement.textContent = email;
+      messageElement.href = 'https://mail.google.com/mail/u/0/#inbox';
+    } else {
+      messageElement.textContent = 'your email';
+      messageElement.removeAttribute('href')
+    }
+  </script>
+
+</body>
+</html>

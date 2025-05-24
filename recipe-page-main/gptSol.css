@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url('/recipe-page-main/assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: hsl(30, 54%, 90%);
+    margin: 0;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+    max-width: 600px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+h1, .Ingredients, .Instructions, .Nut-head {
+    font-family: 'Young Serif', serif;
+    color: hsl(24, 5%, 18%);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+}
+
+.head-para {
+    color: hsl(30, 10%, 34%);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.Box1 {
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+
+.Box1-para {
+    color: hsl(332, 51%, 32%);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.Box1-list {
+    color: hsl(30, 10%, 34%);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding-left: 1.2rem;
+}
+
+.Ing-list {
+    font-size: 0.95rem;
+    color: hsl(30, 10%, 34%);
+    line-height: 1.6;
+    padding-left: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.inst-box {
+    border-top: 1px solid hsl(34, 11%, 75%);
+    border-bottom: 1px solid hsl(34, 11%, 75%);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.order-list {
+    font-size: 0.95rem;
+    color: hsl(30, 10%, 34%);
+    line-height: 1.6;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Nut-para {
+    color: hsl(30, 10%, 34%);
+    font-size: 0.95rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+.nutrition {
+    padding: 1rem 0;
+}
+
+.nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nutrition td {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    padding-left: 1.2rem;
+}
+
+.nutrition td:first-child {
+    color: hsl(30, 10%, 34%);
+}
+
+.nutrition td:last-child {
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    h1, .Ingredients, .Instructions, .Nut-head {
+        font-size: 1.5rem;
+        margin-left: 0;
+    }
+
+    .head-para, .Box1-para, .Box1-list,
+    .Ing-list, .order-list, .Nut-para,
+    .nutrition td {
+        font-size: 0.9rem;
+        margin-left: 0;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .order-list {
+        gap: 12px;
+    }
+}

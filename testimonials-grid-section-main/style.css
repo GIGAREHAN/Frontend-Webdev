@@ -1,0 +1,194 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    font-size:13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+#main-card {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#left-section {
+    width: 73%;
+    height: auto;
+    box-sizing: border-box;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#right-section {
+
+    width: 25%;
+    height: auto;
+}
+
+#top {
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#bottom {
+
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.daniel {
+    width: 58%;
+    height: 100%;
+    background-color: hsl(263, 55%, 52%);
+
+}
+
+.jonathan {
+    width: 40%;
+    height: 100%;
+    margin-top: 0;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.jeanette {
+
+    width: 40%;
+    height: auto;
+    background-color: white;
+
+
+}
+
+.patrick {
+    width: 58%;
+    height: 100%;
+
+    background-color: hsl(219, 29%, 14%)
+}
+
+.kira {
+    background-color: white;
+    height: auto;
+    width: 100%;
+}
+
+.test {
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5px;
+    font-size: 13px;
+    color: white;
+    
+}
+
+.title p {
+    margin: 0;
+}
+
+.header img {
+    border-radius: 50%;
+    margin: 10px;
+    border: 2px solid hsl(214, 17%, 92%);
+    height: 30px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.quote {
+    font-size: 1.2rem;
+    margin-left: 28px;
+    margin-right: 28px;
+    margin-top: -15px;
+    color: white;
+}
+
+.comment {
+    margin-left: 28px;
+    margin-right: 28px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.kira .quote {
+    color: hsl(217, 19%, 35%);
+    font-weight: bold;
+}
+
+.jeanette .quote {
+    color: hsl(217, 19%, 35%);
+    font-weight: bold;
+}
+
+.kira .comment, .jeanette .comment {
+    color: hsl(224, 10%, 45%);
+}
+
+@media (max-width: 768px) {
+    #main-card {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #left-section,
+    #right-section,
+    #top,
+    #bottom {
+      flex-direction: column;
+      width: 100%;
+      gap: 20px;
+    }
+  
+    .daniel,
+    .jonathan,
+    .jeanette,
+    .patrick,
+    .kira {
+      width: 100%;
+    }
+  }
+  

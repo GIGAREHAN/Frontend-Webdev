@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/newsletter/dist/Sign-Up/outputSignUp.css" rel="stylesheet">
+</head>
+<body class="bg-slate-800 md:p-20 flex justify-center">
+  <div class="bg-white overflow-hidden shadow-lg md:w-[1000px] md:h-auto md:rounded-[30px] flex md:flex-row justify-center flex-col-reverse w-full h-full">
+    <div class="flex flex-col md:w-1/2 md:h-auto md:justify-start text-slate-950  md:gap-8 text-left md:py-[60px] justify-center py-[20px] px-[30px] text-[16px] gap-4 h-full md:mt-10">
+      <h1 class="md:text-6xl font-bold md:ml-[30px] text-5xl">Stay updated!</h1>
+      <p class=" md:ml-[30px] ">Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul class="md:ml-[60px] list-image-[url(/newsletter/assets/images/icon-list.svg)] leading-[33px] text-[1.15rem] ml-[30px]">
+        <li class="pl-3 ">Product discovery and building what matters</li>
+        <li class="pl-3 ">Measuring to ensure updates are a success</li>
+        <li class="pl-3 ">And much more!</li>
+      </ul>
+      <form id="signupForm" class="md:w-[100%] w-full">
+        <p class="md:ml-[35px] font-bold mb-[3px]">Email Address</p>
+        <input type="email" id="email" placeholder="email@company.com" name="email" class="border-1 border-gray-400 rounded-[5px] h-[50px] md:w-[90%] md:ml-[32px] w-full px-4 py-2 ">
+        <button class="bg-slate-800 text-white rounded-[5px] md:w-[90%] md:ml-[32px] my-5 h-[50px] hover:cursor-pointer hover:bg-slate-600 w-full">Subscribe to monthly newsletter</button>
+      </form>
+    </div>
+    <div class="w-full md:w-1/2 h-full md:h-auto md:p-5">
+      <!-- Desktop Image -->
+      <div class="hidden md:block md:h-[600px] rounded-2xl overflow-hidden">
+        <img class="w-full h-full object-cover" src="/newsletter/assets/images/illustration-sign-up-desktop.svg" alt="illustration">
+      </div>
+    
+      <!-- Mobile Image -->
+      <div class="md:hidden overflow-hidden">
+        <img class="w-full h-full object-cover" src="/newsletter/assets/images/illustration-sign-up-mobile.svg" alt="illustration">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('signupForm');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+  
+      const email = document.getElementById('email').value;
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+      if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+  
+      // Redirect to the thank you page in a subfolder
+      window.location.href = `/newsletter/dist/Thank-You/index.html?email=${encodeURIComponent(email)}`;
+    });
+  </script>
+
+</body>
+</html>
