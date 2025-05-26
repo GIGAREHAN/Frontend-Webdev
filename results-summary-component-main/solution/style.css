@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}  
+
+body {
+    background-color: hsl(221, 100%, 96%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    padding: 100px;
+}
+
+p, h1 {
+    margin: 0px;
+}
+
+.card {
+    width: 600px;
+    height: auto;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    padding: 35px 35px;
+    border-radius: 20px;
+    width: 45%;
+}
+
+.class-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    text-align: left;
+    width: 55%;
+    gap: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.meter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+.meter span {
+    display: block;
+    font-size: 48px;
+    color: white;
+}
+
+.meter small {
+    font-size: 15px;
+    opacity: 0.8;
+    color: hsl(225, 30%, 89%, 0.692);
+}
+
+.title, .rank {
+    color: hsla(225, 30%, 89%, 0.692);
+}
+
+.great {
+    color: white;
+    font-size: 1.7rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.title {
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    width: 80%;
+    height: 45px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 20px;
+}
+
+.summary {
+    margin-top: 35px;
+    margin-right: 150px;
+    font-size: 1.3rem;
+    font-weight: 550;
+    margin-bottom: 20px;
+}
+
+.reaction {
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.memory {
+    color: hsl(39, 100%, 56%);
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.verbal {
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.visual {
+    color: hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%, 0.1);
+    margin-bottom: 20px;
+}
+
+button {
+    border-radius: 20px;
+    width: 85%;
+    height: 40px;
+    border: 0px;
+    color: white;
+    background-color: hsl(224, 30%, 27%);
+}
+
+.stats img {
+    margin-left: -15px;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+
+.stats span{
+    color: black;
+}
+
+.stats small {
+    color: gray;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsla(224, 30%, 27%,);
+    transition: background 1s ease, transform 0.6s ease;
+}
+
+button:active {
+    background: linear-gradient(45deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    animation: bounce 0.8s;
+    color: white;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1); }
+    30%  { transform: scale(1.2); }
+    50%  { transform: scale(0.9); }
+    70%  { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}  
+
+@media (max-width: 768px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        font-size: 1.5rem;
+    }
+
+    .score {
+        width: 100%;
+        margin: 0px;
+        border-end-end-radius: 20px;
+        border-start-start-radius: 0px;
+        border-start-end-radius: 0px;
+        font-size: 1.5rem;
+    }
+
+    .sum-div {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        text-align: left;
+        width: 80%;
+        font-size: 1.5rem;
+    }
+
+    .summary {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .class-score {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    body {
+        padding: 0px;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        font-size: 1.5rem;
+    }
+
+    .stats {
+        font-size: 1.3rem;
+    }
+
+    button {
+        margin-bottom: 20px;
+        background-color: hsl(224, 30%, 27%);
+    }
+}
