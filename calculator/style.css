@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: #74f1e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', 'Roboto', sans-serif;
+}
+
+.calculator {
+    background-color: black;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+.display {
+    
+    width: 100%;
+    background-color: gray;
+    color: white;
+    font-size: 52px;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: auto; /* Fixed height */
+    overflow-x: auto;
+    white-space: nowrap;
+    text-align: right;
+    font-family: 'Outfit', 'Roboto', sans-serif;
+    transition: font-size 0.3s ease;
+    outline: none;
+
+    box-sizing: border-box;
+
+}
+
+
+button {
+    height: 100%;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    background-color: rgb(61, 60, 60);
+    color: white;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.buttons {
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    flex-grow: 1;               /* Allow it to shrink if needed */
+    transition: all 0.3s ease;
+
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(61, 60, 60, 0.521);
+}
+
+.equal {
+    background: linear-gradient(to bottom, #00f5d4, #00bbf0);
+    color: black;
+    font-weight: bold;
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.top-btn, .operator {
+    background: linear-gradient(to right, #21635a, #043d4d);
+}
+
+.equal:hover {
+    filter: brightness(1.3);
+    transition: filter 0.2s ease;
+    cursor: pointer;
+}
+
+.top-btn:hover, .operator:hover {
+    cursor: pointer;
+    filter: brightness(1.3);
+    transition: filter 0.2s ease
+}

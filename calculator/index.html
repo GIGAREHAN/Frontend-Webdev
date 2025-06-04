@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>calculator</title>
+</head>
+<body>
+   <!-- Calculator box -->
+        <div class="calculator">
+
+            <!-- display to show calculation -->
+            <div class="display" contenteditable="true" spellcheck="false"></div>
+
+            <div class="buttons">
+                <button class="top-btn" id="pi"  onclick="append('Math.PI')">π</button>
+                <button class="top-btn" id="square" onclick="square()">x²</button>
+                <button class="top-btn" id="subtract" onclick="append('-')">-</button>
+                <button class="top-btn" id="divide" onclick="append('/')">/</button>
+          
+                <button id="no7" onclick="append('7')">7</button>
+                <button id="no8" onclick="append('8')">8</button>
+                <button id="no9" onclick="append('9')">9</button>
+                <button class="operator" id="addition" onclick="append('+')">+</button>
+          
+                <button id="no4" onclick="append('4')">4</button>
+                <button id="no5" onclick="append('5')">5</button>
+                <button id="no6" onclick="append('6')">6</button>
+                <button class="operator" id="multiplication" onclick="append('*')">x</button>
+          
+                <button id="no1" onclick="append('1')">1</button>
+                <button id="no2" onclick="append('2')">2</button>
+                <button id="no3" onclick="append('3')">3</button>
+                <!-- <button class="operator"></button> -->
+                <button class="equal" id="equalsto" onclick="calculate()">=</button>
+          
+                <button id="erase" onclick="clearDisplay()">AC</button>
+                <button id="no0" onclick="append('0')">0</button>
+                <button class="del-btn" id="delete" onclick="deleteLast()">DEL</button>
+                
+              </div>
+        </div>
+        <!-- calculator ends here -->
+
+<script src="./script.js"></script>
+</body>
+</html>
